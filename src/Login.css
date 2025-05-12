@@ -1,0 +1,115 @@
+.container{
+    position: relative;
+    
+}
+
+
+
+.container .form-box{
+    width: 100%;
+}
+
+form h1{
+    text-align: center;
+    
+}
+
+form .input-box {
+    position: relative;
+    width: 100%;
+    margin: 10% 0;
+    background: transparent; 
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border: 4px solid white; 
+    background: transparent;
+    color: rgba(241, 82, 82, 0.7);
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 2.5vh;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.input-box input:focus {
+    border-color: #f7b3b3;
+    box-shadow: 0 0 10px #9c5454;
+}
+
+
+.input-box .icon {
+    position:absolute;
+    top: 50%;
+    left:110%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+
+}
+
+.input-box .icon:hover{
+    color:pink;
+}
+
+
+.input-box input::placeholder {
+    color: rgba(247, 109, 109, 0.7); 
+    transition: all 0.3s ease-in-out;
+}
+
+
+.input-box input:focus::placeholder {
+    color: transparent; 
+}
+
+
+.welcome{
+    display: flex;
+    margin-left: 15%;
+    text-shadow: 1px 1px 3px rgb(236, 60, 60);
+}
+
+
+
+.extra input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom heart label */
+.extra label {
+    font-size: 1rem;
+    cursor: pointer;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(153, 51, 51);
+    position: relative;
+    padding-left: 10%; 
+    display: flex;
+    align-items: center;
+}
+
+/*emptu hart*/
+.extra label::before {
+    content: "♡";
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.extra input[type="checkbox"]:checked + label::before {
+    content: "💖"; 
+    font-size: 1.2rem;
+    animation: popHeart 0.3s ease-in-out;
+}
+
+
+@keyframes popHeart {
+    0% { transform: scale(1); content: "♡"; } 
+    50% { transform: scale(1.5); content: "♡"; } 
+    100% { transform: scale(1); content: "💖"; } 
+}
